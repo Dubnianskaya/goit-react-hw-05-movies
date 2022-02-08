@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+// import { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Layout, Cast, Reviews } from 'components';
 import { MoviesPage, HomePage, MovieDetailsPage } from 'pages';
