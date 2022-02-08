@@ -1,2 +1,3 @@
-export * from './PageA';
-export * from './PageB';
+export * from './MoviesPage';
+export * from './HomePage';
+export * from './MovieDetailsPage';
