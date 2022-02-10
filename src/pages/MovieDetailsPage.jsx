@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { NavLink } from 'react-router-dom';
 import {getMoviesById} from '../services/moviesApi';
-import {MovieCard} from '../components/MovieCard';
+import MovieCard from '../components/MovieCard';
 import Loader from "../components/Loader";
+import BackLink from 'components/BackLink';
 import toast from 'react-hot-toast';
 
-export const MovieDetailsPage = () => {
+export const MovieDetailsPage = ({genresArray}) => {
     const [loading, setLoading] = useState(false);
     const [movie, setMovie] = useState(null);
     const {movieId} = useParams();
@@ -32,8 +32,8 @@ export const MovieDetailsPage = () => {
     {loading && <Loader />}
    
     {movie && <>
-    <NavLink to='/'>Go back</NavLink>
-    <MovieCard movie={movie}/>
+    <BackLink />
+    <MovieCard movie={movie} genres={genresArray}/>
     </>}
     </div>
     );

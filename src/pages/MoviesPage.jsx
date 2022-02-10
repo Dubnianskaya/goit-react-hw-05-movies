@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getMoviesByQuery } from '../services/moviesApi';
-import { MovieList } from '../components/MovieList/MovieList';
+import MovieList from '../components/MovieList';
+import SearchForm from '../components/Form'
 import Loader from "../components/Loader";
 import toast from 'react-hot-toast';
 
@@ -44,10 +45,7 @@ export const MoviesPage = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} autoComplete="off">
-        <input type="text" name="query" />
-        <button type="submit">Search</button>
-      </form>
+      <SearchForm handleSubmit={handleSubmit}/>
       {loading && <Loader />}
       {(query && !loading) && <MovieList movies={movies}/>}
     </div>

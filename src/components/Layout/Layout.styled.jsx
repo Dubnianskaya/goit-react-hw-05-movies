@@ -28,8 +28,7 @@ margin-right: auto;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
-padding: 42px;
+padding: 20px 42px;
 background-color: #3895ff7a;
 `;
 
@@ -41,6 +40,7 @@ padding: 0 40px;
 text-decoration: none;
  &:hover,
  &:focus {
-    text-shadow: 0 0 10px rgb(243, 141, 69);
+    text-shadow: 0px 3px 1px rgba(0, 0, 0, 0.9), 0px 1px 2px rgba(0, 0, 0, 0.8),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
  }
 `

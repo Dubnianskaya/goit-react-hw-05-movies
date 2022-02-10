@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import {getPopularMovies} from '../services/moviesApi';
-import { MovieList } from '../components/MovieList/MovieList';
+import MovieList from '../components/MovieList';
 import Loader from "../components/Loader";
 
 export const HomePage = () => {

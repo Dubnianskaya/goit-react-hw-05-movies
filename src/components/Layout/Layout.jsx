@@ -4,7 +4,7 @@ import { GlobalStyle } from '../GlobalStyle';
 import { Toaster } from 'react-hot-toast';
 import {LayoutHeader, Container, Link} from './Layout.styled';
 
-export const Layout = () => {
+const Layout = () => {
   return (
     <>
       <GlobalStyle />
@@ -23,3 +23,5 @@ export const Layout = () => {
       </>
   );
 };
+
+export default Layout;

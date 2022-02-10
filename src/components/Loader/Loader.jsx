@@ -4,7 +4,7 @@ import { BallTriangle } from "react-loader-spinner";
 
 const Loader = () => (
   <LoaderContainer>
-    <BallTriangle color="#ff6800" height={80} width={80} />
+    <BallTriangle color="#3f51b5" height={80} width={80} />
   </LoaderContainer>
 );
 
