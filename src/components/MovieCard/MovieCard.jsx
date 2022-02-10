@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
+import PropTypes from "prop-types";
 import {MovieCardContainer, MovieInfoContainer, AdditionalInformationBox, AdditionalInformationList, AdditionalInformationLink} from './MovieCard.styled'
 
 const MovieCard = ({movie}) => {
@@ -44,6 +45,18 @@ const MovieCard = ({movie}) => {
           </AdditionalInformationBox>
       </div>
   );
+};
+
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      poster_path: PropTypes.string.isRequired, 
+      overview: PropTypes.string.isRequired, 
+      genres: PropTypes.array.isRequired, 
+      vote_average: PropTypes.number.isRequired, 
+      title: PropTypes.string.isRequired, 
+      release_date: PropTypes.string.isRequired, 
+    })
 };
 
 export default MovieCard;

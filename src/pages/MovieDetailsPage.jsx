@@ -6,7 +6,7 @@ import Loader from "../components/Loader";
 import BackLink from 'components/BackLink';
 import toast from 'react-hot-toast';
 
-export const MovieDetailsPage = ({genresArray}) => {
+export const MovieDetailsPage = () => {
     const [loading, setLoading] = useState(false);
     const [movie, setMovie] = useState(null);
     const {movieId} = useParams();
@@ -33,7 +33,7 @@ export const MovieDetailsPage = ({genresArray}) => {
    
     {movie && <>
     <BackLink />
-    <MovieCard movie={movie} genres={genresArray}/>
+    <MovieCard movie={movie}/>
     </>}
     </div>
     );

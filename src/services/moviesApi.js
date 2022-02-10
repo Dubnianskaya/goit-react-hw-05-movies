@@ -27,8 +27,3 @@ export const getMovieReviews = async (id) => {
     const response = await axios.get(`movie/${id}/reviews?api_key=${KEY}`);
     return response.data;
 }
-
-export const getGenres = async () => {
-    const response = await axios.get(`genre/movie/list?api_key=${KEY}`);
-    return response.data.genres;
-}
